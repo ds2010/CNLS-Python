@@ -51,6 +51,7 @@ def cnls_crs(x, y, solver):
     # coefficients of beta 
             G[n**2+i+n*j, (j+1)*n+i] = -1.0  
     
+    # Alpha = 0
     # Define the matrix A
     A = spmatrix(-1.0, range(n), range(n), (n, nvars))
     for i in range(n):
