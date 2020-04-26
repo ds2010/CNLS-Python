@@ -1,3 +1,6 @@
-  
-*.py linguist-language=python
-*.ipynb linguist-language=Jupyter Notebook
+# mark iPython notebooks as Python files
+*.ipynb linguist-language=Python
+
+# documentation
+pvfactors/docs/* linguist-documentation
+notebooks/* linguist-documentation
