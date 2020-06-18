@@ -1,2 +1,2 @@
 # mark iPython notebooks as Python files
-*.ipynb linguist-language=Python
+# *.ipynb linguist-language=Python
