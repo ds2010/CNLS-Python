@@ -66,7 +66,7 @@ def cnls_crs(x, y, solver):
         
     if (solver == 'CVXOPT'):
     # default solver 
-        sol  = cvxopt.solvers.qp(P, q, G, h, A, b)
+        sol  = cvxopt.solvers.conelp(P, q, G, h, A, b)
 
     if (solver == 'MOSEK'):
     # Alternative solver
@@ -75,7 +75,7 @@ def cnls_crs(x, y, solver):
 
         cvxopt.solvers.options['verbose'] = False
 
-        sol  = cvxopt.solvers.qp(P, q, G, h, A, b, solver='mosek')
+        sol  = cvxopt.solvers.conelp(P, q, G, h, A, b, solver='mosek')
     
     # store yhat and g estimates in 'res'
     res = sol['x']
